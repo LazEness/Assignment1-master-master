@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateAccountController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <TextField fx:id="createFirstName" promptText="First Name" />
+                <TextField fx:id="createLastName" promptText="Last Name" />
+                <ChoiceBox fx:id="createGender" value="Male">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Male" />
+                            <String fx:value="Female" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <TextField fx:id="createDOB" promptText="Date of Birth" />
+                <PasswordField fx:id="createSSN" promptText="SSN" />
+                <TextField fx:id="createEmail" promptText="Email" />
+                <TextField fx:id="createPhoneNumber" promptText="Phone Number" />
+                <TextField fx:id="createUserName" promptText="Username" />
+                <PasswordField fx:id="createPassword" promptText="Password" />
+                <PasswordField fx:id="createConfirmPassword" promptText="Confirm Password" />
+                <Button id="signUpBtn" mnemonicParsing="false" onMouseClicked="#createAccount" text="Sign Up" />
+                <Button fx:id="browse" mnemonicParsing="false" onMouseClicked="#openFileChooser" text="Browse" />
+            <TextField fx:id="profilePicture" />
+            </children>
+      </VBox>
+    </children>
+</GridPane>
